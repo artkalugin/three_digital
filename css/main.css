@@ -1,0 +1,154 @@
+@import url("/css/Stolzl.css");
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.page {
+  font-family: "Stolzl", "Arial", sans-serif;
+}
+
+.container {
+  max-width: 1760px;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.header {
+  height: 144px;
+  display: flex;
+  align-items: center;
+}
+
+.hamburger__lines {
+  width: 40px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.hamburger__line {
+  height: 4.24px;
+  background-color: #000000;
+  border-radius: 2px / 50%;
+}
+
+.hamburger__line_middle {
+  width: 30px;
+}
+
+.hamburger__line_bottom {
+  width: 18px;
+}
+
+.header__logo {
+  margin-left: 40px;
+}
+
+.social {
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  list-style: none;
+  display: flex;
+}
+
+.social__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  margin-right: 18px;
+}
+
+.button {
+  display: inline-block;
+  width: 277px;
+  height: 64px;
+  border-radius: 4px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 64px;
+  background-color: #fe6621;
+  border: none;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.button_small {
+  width: 200px;
+}
+
+.button_grey {
+  color: #000000;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+.hero__text {
+  max-width: 870px;
+  margin-right: 40px;
+}
+
+.hero__slogan {
+  margin: 0;
+  font-size: 64px;
+  line-height: 77px;
+  font-weight: normal;
+}
+
+.hero__description {
+  margin: 0;
+  font-size: 24px;
+  line-height: 43px;
+  font-weight: 300;
+  margin-top: 30px;
+}
+
+.hero__button {
+  margin-top: 40px;
+}
+
+.hero__image {
+  flex-shrink: 2;
+}
+
+.feedback {
+  background-color:rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  margin-top: 50px;
+  padding: 80px 148px;
+  border-radius: 10px;
+}
