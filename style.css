@@ -1,0 +1,56 @@
+/* hiding accessibly */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 80px;
+}
+
+.header {
+    height: 144px;
+    display: flex;
+    align-items: center;
+}
+
+.hamburger__lines {
+    width: 40px;
+    height: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.hamburger__line {
+    height: 4.24px;
+    background-color: #000000;
+    border-radius: 2px / 50%;
+}
+
+.hamburger__line_middle {
+    width: 30px;
+}
+
+.hamburger__line_bottom {
+    width: 18px;
+}
+
+.header__logo {
+    margin-left: 40px;
+}
+
+.footer__social {
+    margin-left: auto;
+}
