@@ -118,15 +118,20 @@
             </div>
             <form action="" class="feedback__form">
                 <fieldset class="feedback__fields">
+                    <label for="name-field" class="visually-hidden">Имя</label>
                     <input class="feedback__field" type="text" name="name" id="name-field" placeholder="Имя" required>
+                    <label for="company-field" class="visually-hidden">Компания</label>
                     <input class="feedback__field" type="text" name="company" id="company-field" placeholder="Компания"
                         required>
+                    <label for="email-field" class="visually-hidden">E-mail</label>
                     <input class="feedback__field" type="email" name="email" id="email-field" placeholder="E-mail"
                         required>
+                    <label for="phone-field" class="visually-hidden">Телефон</label>
                     <input class="feedback__field" type="tel" name="phone" id="phone-field" placeholder="Телефон"
                         required>
-                    <textarea class="feedback__field feedback__textarea" name="text" placeholder="Text" maxlength="1000"
-                        oninput="result.value=text.value.length; // if (result.value>=1000) result.style.color='red'"></textarea>
+                    <label for="text-field" class="visually-hidden">Текст</label>
+                    <textarea class="feedback__field feedback__textarea" name="text" id="text-field" placeholder="Text" maxlength="1000"
+                        oninput="result.value=text.value.length; if (result.value>=1000) {result.style.color='red'} else {esult.style.color='#000000'}"></textarea>
                 </fieldset>
                 <span class="feedback__counter"><output name="result">0</output>/1000</span>
                 <p class="feedback__legal">Нажимая кнопку &laquo;Отправить&raquo;, Вы&nbsp;даете согласие
