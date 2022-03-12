@@ -2,7 +2,7 @@ let page = document.querySelector('.page');
 let nav = document.querySelector('.navigation');
 let submitButton = document.querySelector('.feedback__button');
 
-let showNav = () => {
+function showNav() {
     nav.style.display = 'block';
     document.onkeyup = function(evt) {
         if (evt.key == 'Escape') {
@@ -11,11 +11,10 @@ let showNav = () => {
     };
 }
 
-let hideNav = () => {
+function hideNav() {
     page.style.backgroundColor = null;
     nav.style.display = 'none';
 }
-
 
 submitButton.onclick = function() {
     let fields = document.querySelectorAll('.feedback__field[required]');
