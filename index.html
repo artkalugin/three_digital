@@ -9,8 +9,8 @@
     <title>Three. Digital</title>
 </head>
 
-<body class="page container">
-    <header class="header page__header">
+<body class="page">
+    <header class="header page__header container">
         <button class="nav-toggle" onclick="showNav()">
             <div class="nav-toggle__lines">
                 <span class="nav-toggle__line"></span>
@@ -47,8 +47,9 @@
         <a class="button button_grey header__button" href="#">Связаться</a>
     </header>
 
-    <nav class="navigation container">
-        <header class="header">
+    <nav class="navigation">
+        <div class="container navigation__container">
+            <header class="header">
                 <button class="nav-toggle" onclick="hideNav()">
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -59,48 +60,51 @@
                             fill="white" />
                     </svg>
                 </button>
-            <a class="logo nav__logo" href="#">
-                <img class="logo__image" src="img/logo_white.svg" width="136" height="64" alt="Three. Agency">
-            </a>
-        </header>
-        <ul class="navigation__list">
-            <li><a class="navigation__link" href="#">Разработка</a></li>
-            <li><a class="navigation__link" href="#">Продвижение</a></li>
-            <li><a class="navigation__link" href="#">Кейсы</a></li>
-            <li><a class="navigation__link" href="#">Связаться</a></li>
-        </ul>
-        <footer class="footer navigation__footer">
-            <a href="tel:+73430000000" class="footer__phone">+7&nbsp;343&nbsp;000&nbsp;00&nbsp;00</a>
-            <a href="mailto:hello@three.agency" class="footer__email">hello@three.agency</a>
-            <ul class="social">
-                <li>
-                    <a class="social__button social__button_big social__button_grey" href="https://t.me">
-                        <span class="visually-hidden">Telegram</span>
-                        <svg width="32" height="28" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M30.2823 0.0876455C30.1104 0.134984 26.8894 1.39848 23.1246 2.89549C19.3597 4.39245 12.8897 6.96493 8.74665 8.61207C4.60362 10.2593 1.05746 11.6864 0.866294 11.7835C0.486217 11.9765 0.0833225 12.3821 0.0208098 12.6346C-0.0827112 13.0528 0.20766 13.5854 0.721327 13.9193C1.06784 14.1446 8.01931 16.5546 8.1951 16.5104C8.25273 16.4959 12.3849 13.8543 17.3777 10.6403C22.3705 7.42621 26.5336 4.76893 26.6291 4.73522C26.8703 4.64999 27.1936 4.69346 27.2729 4.82185C27.4512 5.11057 27.7851 4.79295 16.3587 15.2023C12.8295 18.4173 12.5748 18.6631 12.6731 18.759C12.7312 18.8156 15.3667 20.8684 18.5299 23.3206C22.8243 26.6498 24.3603 27.8071 24.5936 27.8892C25.0476 28.0489 25.5868 28.035 25.9689 27.8538C26.2645 27.7136 26.7195 27.2846 26.8653 27.0084C26.936 26.8745 32.0023 1.06267 32 0.848289C31.9971 0.581116 31.7707 0.2071 31.5467 0.0993057C31.281 -0.0284505 30.7226 -0.0335834 30.2823 0.0876455Z"
-                                fill="white" />
-                        </svg>
-                    </a>
-                </li>
-                <li>
-                    <a class="social__button social__button_big social__button_grey" href="https://behance.com">
-                        <span class="visually-hidden">Behance</span>
-                        <svg width="34" height="21" viewBox="0 0 34 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M0.8498 0.193085L0.625 0.386251V9.96236V19.5385L0.854046 19.7352L1.08309 19.9321L6.42196 19.9059C12.5123 19.8762 12.2861 19.8994 13.7456 19.1513C14.3512 18.8409 14.6228 18.6345 15.2498 18.0083C15.8768 17.382 16.0834 17.1108 16.3942 16.5058C16.8922 15.5365 17.0923 14.7451 17.0978 13.7216C17.1052 12.3481 16.8352 11.3478 16.1696 10.2834C15.8188 9.72239 15.1636 8.97829 14.7413 8.66126L14.5172 8.49306L14.8027 7.92684C15.1866 7.16546 15.3426 6.45281 15.338 5.4813C15.3335 4.52051 15.1975 3.95358 14.7523 3.04072C14.4865 2.49563 14.2838 2.22365 13.7316 1.67104C13.1508 1.08978 12.9231 0.924059 12.2816 0.615586C11.0163 0.00728116 10.9382 0 5.68003 0H1.0746L0.8498 0.193085ZM21.7349 1.01864C21.5755 1.22093 21.5647 1.31319 21.5888 2.26622C21.6133 3.23565 21.6258 3.30414 21.804 3.4481C21.9838 3.59333 22.1694 3.60085 25.5835 3.60085H29.174L29.346 3.3824C29.5051 3.18044 29.5161 3.08753 29.492 2.15027C29.4699 1.28855 29.4431 1.1113 29.3134 0.96839C29.1626 0.802191 29.1175 0.80019 25.5339 0.80019H21.9069L21.7349 1.01864ZM10.6392 3.89316C11.051 4.1145 11.2704 4.35319 11.4737 4.80114C11.7613 5.43481 11.6545 6.08961 11.1716 6.65302C10.6368 7.27709 10.6312 7.27797 7.25443 7.27997L4.27018 7.28173V5.4777V3.67367L7.29448 3.69728C10.2142 3.72008 10.3298 3.7268 10.6392 3.89316ZM24.9396 4.55924C22.7501 4.83627 20.7271 6.10177 19.5107 7.95533C18.2061 9.94348 17.8633 12.469 18.5869 14.7616C19.4132 17.3792 21.3966 19.2421 24.1384 19.9758C24.9444 20.1914 26.6943 20.1699 27.5833 19.9335C29.0352 19.5472 30.1792 18.861 31.2335 17.7439C31.8292 17.1127 32.6305 15.9225 32.6305 15.6688C32.6305 15.386 32.4715 15.3636 30.459 15.3636H28.4797L28.1317 15.656C26.6739 16.8803 24.4666 16.6932 23.0953 15.2291C22.6013 14.7016 22.1914 13.9836 22.0874 13.4632L22.0354 13.2031H27.5193H33.0031L33.1968 12.9972C33.3722 12.8108 33.3885 12.7329 33.3682 12.177C33.28 9.76184 32.2218 7.60572 30.4162 6.16194C28.8918 4.94325 26.7829 4.32607 24.9396 4.55924ZM26.7421 8.33742C27.4836 8.52074 28.3722 9.14625 28.8519 9.82233L29.0363 10.0824H25.7834H22.5305L22.6269 9.90235C22.8254 9.5317 23.5873 8.88611 24.1566 8.60604C24.9952 8.1937 25.8159 8.1084 26.7421 8.33742ZM12.0044 11.2956C12.4965 11.555 13.0376 12.1256 13.2689 12.6289C13.51 13.1536 13.51 14.1329 13.2689 14.6576C13.0376 15.1609 12.4965 15.7315 12.0044 15.9909L11.6006 16.2038L7.93539 16.2269L4.27018 16.2499V13.6432V11.0365L7.93539 11.0596L11.6006 11.0826L12.0044 11.2956Z"
-                                fill="white" />
-                        </svg>
-                    </a>
-                </li>
+                <a class="logo nav__logo" href="#">
+                    <img class="logo__image" src="img/logo_white.svg" width="136" height="64" alt="Three. Agency">
+                </a>
+            </header>
+            <ul class="navigation__list">
+                <li><a class="navigation__link" href="#">Разработка</a></li>
+                <li><a class="navigation__link" href="#">Продвижение</a></li>
+                <li><a class="navigation__link" href="#">Кейсы</a></li>
+                <li><a class="navigation__link" href="#">Связаться</a></li>
             </ul>
-        </footer>
+            <footer class="footer navigation__footer">
+                <a href="tel:+73430000000" class="footer__phone">+7&nbsp;343&nbsp;000&nbsp;00&nbsp;00</a>
+                <a href="mailto:hello@three.agency" class="footer__email">hello@three.agency</a>
+                <ul class="social">
+                    <li>
+                        <a class="social__button social__button_big social__button_grey" href="https://t.me">
+                            <span class="visually-hidden">Telegram</span>
+                            <svg width="32" height="28" viewBox="0 0 32 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M30.2823 0.0876455C30.1104 0.134984 26.8894 1.39848 23.1246 2.89549C19.3597 4.39245 12.8897 6.96493 8.74665 8.61207C4.60362 10.2593 1.05746 11.6864 0.866294 11.7835C0.486217 11.9765 0.0833225 12.3821 0.0208098 12.6346C-0.0827112 13.0528 0.20766 13.5854 0.721327 13.9193C1.06784 14.1446 8.01931 16.5546 8.1951 16.5104C8.25273 16.4959 12.3849 13.8543 17.3777 10.6403C22.3705 7.42621 26.5336 4.76893 26.6291 4.73522C26.8703 4.64999 27.1936 4.69346 27.2729 4.82185C27.4512 5.11057 27.7851 4.79295 16.3587 15.2023C12.8295 18.4173 12.5748 18.6631 12.6731 18.759C12.7312 18.8156 15.3667 20.8684 18.5299 23.3206C22.8243 26.6498 24.3603 27.8071 24.5936 27.8892C25.0476 28.0489 25.5868 28.035 25.9689 27.8538C26.2645 27.7136 26.7195 27.2846 26.8653 27.0084C26.936 26.8745 32.0023 1.06267 32 0.848289C31.9971 0.581116 31.7707 0.2071 31.5467 0.0993057C31.281 -0.0284505 30.7226 -0.0335834 30.2823 0.0876455Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="social__button social__button_big social__button_grey" href="https://behance.com">
+                            <span class="visually-hidden">Behance</span>
+                            <svg width="34" height="21" viewBox="0 0 34 21" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M0.8498 0.193085L0.625 0.386251V9.96236V19.5385L0.854046 19.7352L1.08309 19.9321L6.42196 19.9059C12.5123 19.8762 12.2861 19.8994 13.7456 19.1513C14.3512 18.8409 14.6228 18.6345 15.2498 18.0083C15.8768 17.382 16.0834 17.1108 16.3942 16.5058C16.8922 15.5365 17.0923 14.7451 17.0978 13.7216C17.1052 12.3481 16.8352 11.3478 16.1696 10.2834C15.8188 9.72239 15.1636 8.97829 14.7413 8.66126L14.5172 8.49306L14.8027 7.92684C15.1866 7.16546 15.3426 6.45281 15.338 5.4813C15.3335 4.52051 15.1975 3.95358 14.7523 3.04072C14.4865 2.49563 14.2838 2.22365 13.7316 1.67104C13.1508 1.08978 12.9231 0.924059 12.2816 0.615586C11.0163 0.00728116 10.9382 0 5.68003 0H1.0746L0.8498 0.193085ZM21.7349 1.01864C21.5755 1.22093 21.5647 1.31319 21.5888 2.26622C21.6133 3.23565 21.6258 3.30414 21.804 3.4481C21.9838 3.59333 22.1694 3.60085 25.5835 3.60085H29.174L29.346 3.3824C29.5051 3.18044 29.5161 3.08753 29.492 2.15027C29.4699 1.28855 29.4431 1.1113 29.3134 0.96839C29.1626 0.802191 29.1175 0.80019 25.5339 0.80019H21.9069L21.7349 1.01864ZM10.6392 3.89316C11.051 4.1145 11.2704 4.35319 11.4737 4.80114C11.7613 5.43481 11.6545 6.08961 11.1716 6.65302C10.6368 7.27709 10.6312 7.27797 7.25443 7.27997L4.27018 7.28173V5.4777V3.67367L7.29448 3.69728C10.2142 3.72008 10.3298 3.7268 10.6392 3.89316ZM24.9396 4.55924C22.7501 4.83627 20.7271 6.10177 19.5107 7.95533C18.2061 9.94348 17.8633 12.469 18.5869 14.7616C19.4132 17.3792 21.3966 19.2421 24.1384 19.9758C24.9444 20.1914 26.6943 20.1699 27.5833 19.9335C29.0352 19.5472 30.1792 18.861 31.2335 17.7439C31.8292 17.1127 32.6305 15.9225 32.6305 15.6688C32.6305 15.386 32.4715 15.3636 30.459 15.3636H28.4797L28.1317 15.656C26.6739 16.8803 24.4666 16.6932 23.0953 15.2291C22.6013 14.7016 22.1914 13.9836 22.0874 13.4632L22.0354 13.2031H27.5193H33.0031L33.1968 12.9972C33.3722 12.8108 33.3885 12.7329 33.3682 12.177C33.28 9.76184 32.2218 7.60572 30.4162 6.16194C28.8918 4.94325 26.7829 4.32607 24.9396 4.55924ZM26.7421 8.33742C27.4836 8.52074 28.3722 9.14625 28.8519 9.82233L29.0363 10.0824H25.7834H22.5305L22.6269 9.90235C22.8254 9.5317 23.5873 8.88611 24.1566 8.60604C24.9952 8.1937 25.8159 8.1084 26.7421 8.33742ZM12.0044 11.2956C12.4965 11.555 13.0376 12.1256 13.2689 12.6289C13.51 13.1536 13.51 14.1329 13.2689 14.6576C13.0376 15.1609 12.4965 15.7315 12.0044 15.9909L11.6006 16.2038L7.93539 16.2269L4.27018 16.2499V13.6432V11.0365L7.93539 11.0596L11.6006 11.0826L12.0044 11.2956Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </footer>
+        </div>
     </nav>
 
     </section>
     <main>
         <h1 class="visually-hidden">Агентство Three. Digital</h1>
-        <section class="hero">
+        <section class="hero container">
             <div class="hero__text">
                 <h2 class="hero__slogan">Превращаем идеи в&nbsp;успешные веб-проекты</h2>
                 <p class="hero__description">Прототипируем, дизайним и&nbsp;кодим бизнес-решения любой сложности:
@@ -110,7 +114,7 @@
             </div>
             <img class="hero__image" src="img/hero.png" alt="">
         </section>
-        <section class="feedback">
+        <section class="feedback container">
             <div class="feedback__text">
                 <h2 class="feedback__heading">Хотите обсудить ваш проект?</h2>
                 <p class="feedback__description">Оставьте свои данные и&nbsp;мы свяжемся
@@ -130,7 +134,8 @@
                     <input class="feedback__field" type="tel" name="phone" id="phone-field" placeholder="Телефон"
                         required>
                     <label for="text-field" class="visually-hidden">Текст</label>
-                    <textarea class="feedback__field feedback__textarea" name="text" id="text-field" placeholder="Text" maxlength="1000"
+                    <textarea class="feedback__field feedback__textarea" name="text" id="text-field" placeholder="Text"
+                        maxlength="1000"
                         oninput="result.value=text.value.length; if (result.value>=1000) {result.style.color='red'} else {esult.style.color='#000000'}"></textarea>
                 </fieldset>
                 <span class="feedback__counter"><output name="result">0</output>/1000</span>
@@ -141,7 +146,7 @@
                 <button class="button feedback__button" type="submit">Отправить</button>
             </form>
         </section>
-        <footer class="footer page__footer">
+        <footer class="footer page__footer container">
             <a href="tel:+73430000000" class="footer__phone">+7&nbsp;343&nbsp;000&nbsp;00&nbsp;00</a>
             <a href="mailto:hello@three.agency" class="footer__email">hello@three.agency</a>
             <ul class="social">
@@ -168,7 +173,7 @@
             </ul>
         </footer>
     </main>
-    <script src="script.js"></script>
+    <script src="script.js" type="text/javascipt"></script>
 </body>
 
 </html>

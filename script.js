@@ -3,8 +3,7 @@ let nav = document.querySelector('.navigation');
 let submitButton = document.querySelector('.feedback__button');
 
 let showNav = () => {
-    nav.style.display = 'flex';
-    page.style.backgroundColor = '#000000';
+    nav.style.display = 'block';
     document.onkeyup = function(evt) {
         if (evt.key == 'Escape') {
             hideNav();
