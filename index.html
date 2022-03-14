@@ -11,7 +11,7 @@
 
 <body class="page">
     <header class="header page__header container">
-        <button class="nav-toggle" onclick="showNav()">
+        <button class="nav-toggle" id="nav-open">
             <div class="nav-toggle__lines">
                 <span class="nav-toggle__line"></span>
                 <span class="nav-toggle__line nav-toggle__line_middle"></span>
@@ -47,10 +47,10 @@
         <a class="button button_grey header__button" href="#">Связаться</a>
     </header>
 
-    <nav class="navigation">
+    <nav class="navigation" hidden>
         <div class="container navigation__container">
             <header class="header">
-                <button class="nav-toggle" onclick="hideNav()">
+                <button class="nav-toggle" id="nav-close">
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M1.4974 29.7816C0.67041 28.9546 0.61274 27.6714 1.36859 26.9156L26.9157 1.3685C27.6715 0.61265 28.9547 0.670319 29.7817 1.49731C30.6087 2.3243 30.6663 3.60745 29.9105 4.36331L4.3634 29.9104C3.60755 30.6662 2.3244 30.6086 1.4974 29.7816Z"
@@ -120,7 +120,7 @@
                 <p class="feedback__description">Оставьте свои данные и&nbsp;мы свяжемся
                     с&nbsp;вами в&nbsp;ближайшее время, чтобы<br>обсудить детали</p>
             </div>
-            <form action="" class="feedback__form">
+            <form action="" class="feedback__form" id="feedback-form">
                 <fieldset class="feedback__fields">
                     <label for="name-field" class="visually-hidden">Имя</label>
                     <input class="feedback__field" type="text" name="name" id="name-field" placeholder="Имя" required>
@@ -135,10 +135,9 @@
                         required>
                     <label for="text-field" class="visually-hidden">Текст</label>
                     <textarea class="feedback__field feedback__textarea" name="text" id="text-field" placeholder="Text"
-                        maxlength="1000"
-                        oninput="result.value=text.value.length; if (result.value>=1000) {result.style.color='red'} else {esult.style.color='#000000'}"></textarea>
+                        maxlength="1000"></textarea>
                 </fieldset>
-                <span class="feedback__counter"><output name="result">0</output>/1000</span>
+                <span class="feedback__counter"><output name="result" id="text-length">0</output>/1000</span>
                 <p class="feedback__legal">Нажимая кнопку &laquo;Отправить&raquo;, Вы&nbsp;даете согласие
                     на&nbsp;обработку своих персональных данных, а&nbsp;именно совершение действий,
                     предусмотренных&nbsp;п.&nbsp;3&nbsp;ч.&nbsp;1&nbsp;ст.&nbsp;3&nbsp;Федерального закона
